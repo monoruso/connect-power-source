@@ -44,8 +44,8 @@ function mostrarEquipo(equipo) {
     const corrienteConUnidad = obtenerUnidadCorriente(equipo.corriente, equipo.corriente);
 
     document.getElementById("equipo-info").innerHTML = `
-        <strong>Voltaje requerido:</strong> ${equipo.voltaje}V<br>
-        <strong>Corriente requerida:</strong> ${corrienteConUnidad}<br>
+        <strong>Voltaje:</strong> ${equipo.voltaje}V<br>
+        <strong>Corriente:</strong> ${corrienteConUnidad}<br>
         <strong>Polaridad:</strong><br>
         <img src="${imagenPolaridad}" alt="Polaridad" style="width: 100px; height: auto; margin-top: 5px;">
     `;
@@ -149,10 +149,9 @@ function mostrarFuentes(fuentes, equipo) {
             Corriente: ${fuente.corriente} mA<br>
             Polaridad:<br>
             <img src="${imagenPolaridad}" alt="Polaridad" style="width: 80px; height: auto; margin: 5px 0;"><br>
-            <button>Conectar</button>
         `;
 
-        div.querySelector("button").onclick = () => {
+        div.onclick = () => {
             const resultado = verificarCompatibilidad(fuente, equipo);
             if (resultado.esCompatible) {
                 mostrarResultado("¡Correcto!", "correcto");
@@ -160,6 +159,7 @@ function mostrarFuentes(fuentes, equipo) {
                 mostrarResultado("Fuente incorrecta: " + resultado.errores.join(", "), "incorrecto");
             }
         };
+
 
         contenedor.appendChild(div);
     });
