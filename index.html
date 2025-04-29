@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Conecta la Fuente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<div id="vista-ayuda" style="display: none;">
+    <div class="ayuda-contenido">
+        <h2>¿Cómo elegir una fuente correcta?</h2>
+        <ul>
+            <li>🔌 <strong>Voltaje:</strong> Debe ser exactamente igual al requerido por el equipo.</li>
+            <li>⚡ <strong>Corriente:</strong> Puede ser igual o superior. No debe ser menor.</li>
+            <li>🔄 <strong>Polaridad:</strong> Debe coincidir con la del equipo.</li>
+        </ul>
+        <button id="volver-btn">Volver al ejercicio</button>
+    </div>
+</div>
+
+
+
+<div id="resultado-emergente" class="ventana-emergente">
+    <div class="contenido-emergente">
+        <p id="mensaje-resultado"></p>
+        <button onclick="cerrarResultado()">Volver</button>
+        <button onclick="siguienteEjercicio()">Siguiente ejercicio</button>
+    </div>
+</div>
+
+
+
+
+<body>
+    <h1>Conecta la Fuente</h1>
+
+    <section id="equipo">
+        <h2>Equipo a Alimentar</h2>
+        <p id="equipo-info"></p>
+    </section>
+
+    <section id="fuentes">
+        <h2>Opciones de Fuente</h2>
+        <div id="fuente-lista"></div>
+    </section>
+
+    <section id="resultado">
+        <p id="mensaje"></p>
+        <button id="siguiente-btn">Siguiente ejercicio</button>
+        <button id="ayuda-btn">Ayuda</button>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
