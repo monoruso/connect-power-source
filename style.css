@@ -124,3 +124,28 @@ button:hover {
     color: white;
 
 }
+
+/* Estilos para escritorio (por defecto) */
+body {
+    font-size: 18px;
+    padding: 40px;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 28px;
+    }
+
+    h1, h2, h3 {
+        font-size: 32px;
+    }
+
+    button {
+        font-size: 24px;
+        padding: 16px 32px;
+    }
+
+    .fuente, .equipo {
+        font-size: 24px;
+    }
+}
